@@ -52,17 +52,17 @@ class Classifier(nn.Module):
             nn.Conv2d(in_channels=4, out_channels=16, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(16),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),  # B x 5 x 32 x 32
+            nn.MaxPool2d(kernel_size=2, stride=2),  # B x 16 x 32 x 32
 
             nn.Conv2d(in_channels=16, out_channels=32, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(32),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),  # B x 6 x 16 x 16
+            nn.MaxPool2d(kernel_size=2, stride=2),  # B x 32 x 16 x 16
 
             nn.Conv2d(in_channels=32, out_channels=16, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(16),
             nn.ReLU(),
-            nn.MaxPool2d(kernel_size=2, stride=2),  # B x 7 x 8 x 8
+            nn.MaxPool2d(kernel_size=2, stride=2),  # B x 16 x 8 x 8
 
             nn.Conv2d(in_channels=16, out_channels=8, kernel_size=3, stride=1, padding=1),
             nn.BatchNorm2d(8),
@@ -81,18 +81,6 @@ class Classifier(nn.Module):
         total_parameters = (sum(p.numel() for p in self.conv_layers.parameters() if p.requires_grad) +
                             sum(p.numel() for p in self.MLP.parameters() if p.requires_grad))
         print(f"Created classifier with {total_parameters} trainable parameters")
-
-    # Saves the model weights to location
-    def save(self, location: str):
-        pass
-
-    # Loads model weights from location
-    def load(self, location: str):
-        pass
-
-    # Train the classifier against the dataset specified initially
-    def train_epochs(self, epochs: int = 0):
-        pass
 
     def forward(self, x):
         # Input x has dimensions B x 3 x 128 x 128, B is batch size
