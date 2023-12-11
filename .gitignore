@@ -22,3 +22,10 @@ frontend/dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+frontend/.yarn/*
+!frontend/.yarn/patches
+!frontend/.yarn/plugins
+!frontend/.yarn/releases
+!frontend/.yarn/sdks
+!frontend/.yarn/versions
