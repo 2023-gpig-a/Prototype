@@ -1,3 +1,6 @@
+!#/bin/sh
+set -eux
+
 #COCO Dataset
 mkdir -p Datasets/coco/images
 cd Datasets/coco/images
