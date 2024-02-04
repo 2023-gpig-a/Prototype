@@ -10,9 +10,10 @@ This folder contains all the files that wrap code into docker containers and dep
 
 To run the project in full, use `docker-compose up -d`.
 
-### Database Management
+### Data Persistence
 
-The database files are stored in a persistent [Docker volume](https://docs.docker.com/storage/volumes/) called `dbfiles`.
+- The database files are stored in a persistent [Docker volume](https://docs.docker.com/storage/volumes/) called `dbfiles`.
+- Likewise, Kafka persistence files are stored in a volume called `kafkafiles`.
 
 ### Adding a Microservice
 

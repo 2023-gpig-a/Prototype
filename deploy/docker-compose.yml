@@ -4,6 +4,8 @@ services:
   kafka:
     # latest image as of writing
     image: bitnami/kafka:3.6.1
+    volumes:
+      - "kafkafiles:/bitnami/kafka"
   db:
     # latest image as of writing
     image: postgres:12.17
@@ -15,3 +17,4 @@ services:
 
 volumes:
   dbfiles:
+  kafkafiles:
