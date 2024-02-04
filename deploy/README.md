@@ -18,6 +18,7 @@ The database files are stored in a persistent [Docker volume](https://docs.docke
 
 <!-- TODO: provide template dockerfile -->
 1. Create a build file (called `Dockerfile`) for the microservice in the root of it's codebase.
+  You can copy [the template in this folder](./Dockerfile.sample) to start.
   See the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) for more info and directive definitions.
  <!-- TODO: expand me -->
 2. Add the microservice into the `docker-compose.yml` file's `services:` section:
