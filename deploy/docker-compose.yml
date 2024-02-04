@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  kafka:
+    # latest image as of writing
+    image: bitnami/kafka:3.6.1
+  db:
+    # latest image as of writing
+    image: postgres:12.17
+
+volumes:
