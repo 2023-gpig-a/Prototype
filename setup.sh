@@ -1,4 +1,4 @@
-!#/bin/sh
+#!/bin/sh
 set -eux
 
 #COCO Dataset
