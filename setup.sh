@@ -1,10 +1,6 @@
 #COCO Dataset
-mkdir Datasets
-cd Datasets
-mkdir coco
-cd coco
-mkdir images
-cd images
+mkdir -p Datasets/coco/images
+cd Datasets/coco/images
 
 curl http://images.cocodataset.org/zips/train2017.zip --output train2017.zip
 curl http://images.cocodataset.org/zips/val2017.zip --output val2017.zip
