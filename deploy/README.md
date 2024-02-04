@@ -2,7 +2,7 @@
 
 This folder contains all the files that wrap code into docker containers and deploy them together, alongside [Kafka](https://kafka.apache.org/) and [Postgres](https://www.postgresql.org/).
 
-**This is not production safe.**
+**‼️ This is not production safe.**
 
 ## Usage
 
