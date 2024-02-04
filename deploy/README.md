@@ -18,7 +18,7 @@ The database files are stored in a persistent [Docker volume](https://docs.docke
 
 <!-- TODO: provide template dockerfile -->
 1. Create a build file (called `Dockerfile`) for the microservice in the root of it's codebase.
-   See the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) for more info and directive definitions.
+  See the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) for more info and directive definitions.
  <!-- TODO: expand me -->
 2. Add the microservice into the `docker-compose.yml` file's `services:` section:
 ```yaml
@@ -32,7 +32,8 @@ services:
 ```
 <!-- TODO: persistent env vars passed between containers -->
 3. If the microservice needs database access, it's preferred to pass the credentials to it as environment variables rather than hardcoding them.
-   Insert an `env` key into your new service definition:
+  Make sure your microservice reads these credentials from it's environment.
+  Insert an `env` key into your new service definition:
 ```yaml
   microservicename:
     # other config...
@@ -40,7 +41,6 @@ services:
       DB_USER: "gpig"
       DB_PASSWORD: "heresapassword"
 ```
-   Make sure your microservice reads these credentials from it's environment.
 4. Add any other microservice-specific parts to the file
 5. Optionally, run `docker-compose up -d` to update the running configuration to use the new service
 
