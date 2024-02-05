@@ -18,7 +18,7 @@ To run the project in full, use `docker-compose up -d`.
 ### Adding a Microservice
 
 <!-- TODO: provide template dockerfile -->
-1. Create a build file (called `Dockerfile`) for the microservice in the root of it's codebase.
+1. Create a build file (called `Dockerfile`) for the microservice in the root of its codebase.
   You can copy [the template in this folder](./Dockerfile.sample) to start.
   See the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) for more info and directive definitions.
  <!-- TODO: expand me -->
