@@ -1,0 +1,10 @@
+FROM python:3.9
+
+RUN pip install -r requirements.txt
+
+# expose default non-privileged HTTP port
+EXPOSE 8080/tcp
+
+ENTRYPOINT "/usr/bin/python3.9"
+# replace this with the "main" python file of your microservice
+CMD ["mainfile.py"]
