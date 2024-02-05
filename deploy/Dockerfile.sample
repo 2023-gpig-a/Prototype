@@ -1,10 +1,14 @@
 FROM python:3.9
 
-RUN pip install -r requirements.txt
+# install requirements before adding app
+COPY ./requirements.txt /tmp
+RUN pip install --no-cache-dir --upgrade -r /tmp/requirements.txt
+RUN rm /tmp/requirements.txt
 
 # expose default non-privileged HTTP port
 EXPOSE 8080/tcp
 
-ENTRYPOINT "/usr/bin/python3.9"
-# replace this with the "main" python file of your microservice
-CMD ["mainfile.py"]
+COPY . /app
+WORKDIR /app
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.00.0", "--port", "8080"]

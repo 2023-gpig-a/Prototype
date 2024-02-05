@@ -17,17 +17,16 @@ To run the project in full, use `docker-compose up -d`.
 
 ### Adding a Microservice
 
-<!-- TODO: provide template dockerfile -->
 1. Create a build file (called `Dockerfile`) for the microservice in the root of its codebase.
   You can copy [the template in this folder](./Dockerfile.sample) to start.
   See the [Dockerfile reference](https://docs.docker.com/engine/reference/builder/) for more info and directive definitions.
- <!-- TODO: expand me -->
+<!-- TODO: expand me -->
 2. Add the microservice into the `docker-compose.yml` file's `services:` section:
 ```yaml
 services:
 # other services...
   microservicename:
-    # the relative path (in this repo!) of the microservice's codebase - the folder with the Dockerfile in it
+    # the relative path (in this repo!) of the microservice's codebase, ie. the folder with the Dockerfile in it
     build: relative/path/to/code
     # we're building from source so instead of pulling this image, it'll name the built one like that for convenience
     image: gpig-2023-a/microservicename
