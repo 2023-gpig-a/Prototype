@@ -9,7 +9,7 @@ services:
   db:
     # latest image as of writing
     image: postgres:12.17
-    env:
+    environment:
       POSTGRES_USER: "gpig"
       POSTGRES_PASSWORD: "heresapassword"
     volumes:
