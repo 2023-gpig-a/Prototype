@@ -2,6 +2,9 @@ from fastapi import FastAPI, HTTPException, status
 
 app = FastAPI()
 
+@app.get("/")
+async def hello_world():
+    return {"response": "Hello World"}
 
 @app.get("/upload_images")
 async def upload_images():

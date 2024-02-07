@@ -6,13 +6,18 @@ This system will be responsible for the following:
 * Matching similar plants and assigning a `plant_id` to them
 * Tracking the growth of plants over time
 
-## How to run
+## Running without docker
 
-In a terminal navigate to the root dir and run the following
 ```
 source venv/bin/activate
 pip install -r requirements.txt
-uvicorn dmas.app:app --reload
+uvicorn dmas.app.main:app --reload
+```
+
+## Running with docker
+```
+docker build -t dmas_image ./dmas
+docker run -d --name dmas -p 8080:8080 dmas_image
 ```
 
 ## Endpoints:
