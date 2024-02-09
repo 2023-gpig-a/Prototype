@@ -20,7 +20,7 @@ async def process_raw_images():
     )
 
 
-@app.get("track_growth")
+@app.get("/track_growth")
 async def track_growth():
     raise HTTPException(
         status_code=status.HTTP_501_NOT_IMPLEMENTED

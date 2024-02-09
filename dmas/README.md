@@ -1,6 +1,6 @@
 # DMAS - Data Management and Analysis System
 
-This system will be responsible for the following:
+This system is responsible for the following:
 * Ingesting raw image data into the database
 * Analysing raw image data to extract plant data
 * Matching similar plants and assigning a `plant_id` to them
@@ -9,6 +9,7 @@ This system will be responsible for the following:
 ## Running without docker
 
 ```
+python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 uvicorn dmas.app.main:app --reload
@@ -16,7 +17,7 @@ uvicorn dmas.app.main:app --reload
 
 ## Running with docker
 ```
-docker build -t dmas_image ./dmas
+docker build -t dmas_image .
 docker run -d --name dmas -p 8080:8080 dmas_image
 ```
 
